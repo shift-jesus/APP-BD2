@@ -10,12 +10,15 @@
 <body>
     <header>
         <div class="container">
-            <a href="../HTML/index.html" class="logo">
-                Mujeres Empoderadas  <!-- QUITADO emoji -->
+            <a href="index.html" class="logo">
+                <!-- Logo pequeño en el header -->
+                <img src="../IMAGENES/LogoUniNuPequeño.png" alt="UniNúñez" class="logo-img">
+                <span class="logo-text">Mujeres Empoderadas</span>
             </a>
             <nav>
-                <a href="../HTML/index.html">Ver Sitio</a>
-                <div class="user-info">
+                <a href="index.html">Inicio</a>
+                <!-- El botón de Iniciar Sesión NO aparece para moderadores -->
+                <div class="user-info" id="userMenu">
                     <span class="mod-badge">MOD</span>
                     <span class="user-name" id="userName">Cargando...</span>
                     <button class="btn btn-acento" id="logoutBtn">Cerrar Sesión</button>
@@ -39,26 +42,26 @@
     </div>
 
     <main class="container">
-        <!-- DESCRIPCIÓN DE MUJER EMPODERADA -->
-        <section style="background: white; padding: 30px; border-radius: var(--border-radius); margin-bottom: 40px; box-shadow: var(--sombra);">
-            <h2 style="color: var(--color-primario); margin-bottom: 15px;">¿Qué es una mujer empoderada?</h2>
-            <p style="font-size: 18px; line-height: 1.8; color: #333;">
-                Una <strong>mujer empoderada</strong> es aquella que tiene control sobre su vida, sus decisiones y su destino. 
-                Es una mujer que reconoce su valor, confía en sus capacidades y no permite que las barreras sociales, 
-                culturales o de género limiten su potencial. Las mujeres empoderadas son líderes, innovadoras, 
-                luchadoras y agentes de cambio que inspiran a otras generaciones a seguir sus pasos.
+        <!-- DESCRIPCIÓN DE MUJER EMPODERADA (igual que index.html) -->
+        <section style="text-align: center; padding: 40px 0; background: linear-gradient(135deg, var(--color-primario), #f39c12); color: white; border-radius: var(--border-radius); margin-bottom: 40px;">
+            <h1 style="font-size: 48px; margin-bottom: 20px;">
+                Mujeres que cambiaron el mundo
+            </h1>
+            <p style="font-size: 20px; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                Descubre las historias de mujeres extraordinarias que rompieron barreras 
+                y dejaron una huella imborrable en la historia.
             </p>
         </section>
 
         <!-- LISTA DE MUJERES PARA EDITAR -->
-        <h2 style="color: var(--color-primario); margin-bottom: 20px;">Mujeres Empoderadas</h2>
-        <div id="adminMujeresGrid">
+        <h2 style="color: var(--color-primario); margin-bottom: 20px; font-size: 32px;">Mujeres Empoderadas</h2>
+        <div id="adminMujeresGrid" class="grid">
             <!-- Las cards se cargarán aquí con JavaScript -->
             <div class="loading">Cargando mujeres...</div>
         </div>
     </main>
 
-    <!-- Modal de edición (igual que antes) -->
+    <!-- Modal de edición -->
     <div class="modal" id="editModal">
         <div class="modal-content">
             <span class="modal-close" id="closeModal">&times;</span>
@@ -84,17 +87,18 @@
                 
                 <div class="form-group">
                     <label for="editImagen">URL de la imagen</label>
-                    <input type="url" id="editImagen" required>
+                    <input type="text" id="editImagen" placeholder="../IMAGENES/maria-curie.webp">
+                    <small style="color: #666;">Dejar vacío para usar placeholder</small>
                 </div>
                 
                 <div class="form-group">
                     <label for="editDescripcion">Descripción corta</label>
-                    <textarea id="editDescripcion" required></textarea>
+                    <textarea id="editDescripcion" required rows="3"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="editBiografia">Biografía completa</label>
-                    <textarea id="editBiografia" required></textarea>
+                    <textarea id="editBiografia" required rows="5"></textarea>
                 </div>
                 
                 <div class="form-actions">
@@ -107,7 +111,13 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Mujeres Empoderadas - Panel de Moderación</p>
+            <div style="margin-bottom: 20px;">
+                <!-- Logo grande en el footer -->
+                <img src="../IMAGENES/LogoUniNuGrande.png" alt="Corporación Universitaria Rafael Núñez" style="height: 60px; opacity: 0.9;">
+                <p style="font-size: 14px; margin-top: 5px;">Vigilada Mineducación</p>
+            </div>
+            <p>© 2026 Mujeres Empoderadas - Proyecto de Estudiantes de Ingeniería de la Universidad UniNúñez</p>
+            <p>Honrando a las mujeres que cambiaron la historia</p>
         </div>
     </footer>
 

@@ -10,8 +10,35 @@
     --sombra-hover: 0 8px 15px rgba(224, 119, 15, 0.3);
     --border-radius: 12px;
 }
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
 
-/* Resto del CSS igual, solo cambian las variables */
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primario);
+    border-left: 2px solid var(--color-primario);
+    padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 18px;
+    }
+    .logo-img {
+        height: 40px;
+    }
+}
 /* ===== RESET ===== */
 * {
     margin: 0;
