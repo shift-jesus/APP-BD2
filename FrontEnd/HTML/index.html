@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeres Empoderadas | Inicio</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                Mujeres Empoderadas  <!-- QUITADO el emoji -->
+            </a>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="../PAGINAS/login.html" class="btn btn-primario" id="loginLink">Iniciar Sesión</a>  <!-- QUITADO (MOD) -->
+                <div class="user-info hidden" id="userMenu">
+                    <span class="mod-badge">MOD</span>
+                    <span class="user-name" id="userName"></span>
+                    <button class="btn btn-acento" id="logoutBtn">Cerrar Sesión</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section style="text-align: center; padding: 60px 0;">
+            <h1 style="font-size: 48px; color: var(--color-primario); margin-bottom: 20px;">
+                Mujeres que cambiaron el mundo
+            </h1>
+            <p style="font-size: 20px; color: #666; max-width: 800px; margin: 0 auto;">
+                Descubre las historias de mujeres extraordinarias que rompieron barreras 
+                y dejaron una huella imborrable en la historia.
+            </p>
+        </section>
+
+        <section class="grid" id="mujeresGrid">
+            <!-- Las cards se cargarán aquí con JavaScript -->
+            <div class="loading">Cargando mujeres empoderadas...</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Mujeres Empoderadas - Proyecto de Bibliografía Femenina</p>
+            <p>Honrando a las mujeres que cambiaron la historia</p>
+        </div>
+    </footer>
+
+    <script src="../JS/main.js"></script>
+    <script src="../JS/auth.js"></script>
+</body>
+</html>

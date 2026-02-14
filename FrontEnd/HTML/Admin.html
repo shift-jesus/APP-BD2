@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Moderación | Mujeres Empoderadas</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../HTML/index.html" class="logo">
+                Mujeres Empoderadas  <!-- QUITADO emoji -->
+            </a>
+            <nav>
+                <a href="../HTML/index.html">Ver Sitio</a>
+                <div class="user-info">
+                    <span class="mod-badge">MOD</span>
+                    <span class="user-name" id="userName">Cargando...</span>
+                    <button class="btn btn-acento" id="logoutBtn">Cerrar Sesión</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-header">
+        <div class="container">
+            <div class="admin-title">
+                <h1>Panel de Moderación</h1>
+                <span class="mod-badge">Área exclusiva para moderadores</span>
+            </div>
+            <div class="admin-actions">
+                <button class="btn btn-primario" id="btnNuevaMujer">
+                    + Agregar Nueva Mujer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- DESCRIPCIÓN DE MUJER EMPODERADA -->
+        <section style="background: white; padding: 30px; border-radius: var(--border-radius); margin-bottom: 40px; box-shadow: var(--sombra);">
+            <h2 style="color: var(--color-primario); margin-bottom: 15px;">¿Qué es una mujer empoderada?</h2>
+            <p style="font-size: 18px; line-height: 1.8; color: #333;">
+                Una <strong>mujer empoderada</strong> es aquella que tiene control sobre su vida, sus decisiones y su destino. 
+                Es una mujer que reconoce su valor, confía en sus capacidades y no permite que las barreras sociales, 
+                culturales o de género limiten su potencial. Las mujeres empoderadas son líderes, innovadoras, 
+                luchadoras y agentes de cambio que inspiran a otras generaciones a seguir sus pasos.
+            </p>
+        </section>
+
+        <!-- LISTA DE MUJERES PARA EDITAR -->
+        <h2 style="color: var(--color-primario); margin-bottom: 20px;">Mujeres Empoderadas</h2>
+        <div id="adminMujeresGrid">
+            <!-- Las cards se cargarán aquí con JavaScript -->
+            <div class="loading">Cargando mujeres...</div>
+        </div>
+    </main>
+
+    <!-- Modal de edición (igual que antes) -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Editar Mujer</h2>
+            
+            <form id="editForm" class="edit-form">
+                <input type="hidden" id="editId">
+                
+                <div class="form-group">
+                    <label for="editNombre">Nombre completo</label>
+                    <input type="text" id="editNombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editFechas">Fechas (ej: 1867-1934)</label>
+                    <input type="text" id="editFechas" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editPais">País</label>
+                    <input type="text" id="editPais" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editImagen">URL de la imagen</label>
+                    <input type="url" id="editImagen" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editDescripcion">Descripción corta</label>
+                    <textarea id="editDescripcion" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editBiografia">Biografía completa</label>
+                    <textarea id="editBiografia" required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-acento" id="cancelEdit">Cancelar</button>
+                    <button type="submit" class="btn btn-primario">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Mujeres Empoderadas - Panel de Moderación</p>
+        </div>
+    </footer>
+
+    <script src="../JS/auth.js"></script>
+    <script src="../JS/admin.js"></script>
+</body>
+</html>

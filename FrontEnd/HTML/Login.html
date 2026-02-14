@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Moderadores</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../HTML/index.html" class="logo">
+                Mujeres Empoderadas  <!-- QUITADO emoji -->
+            </a>
+            <nav>
+                <a href="../HTML/index.html">Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="login-page">
+        <div class="login-container">
+            <h2>
+                Acceso Moderadores
+            </h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="mod@mujeres.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                
+                <button type="submit" class="btn-login">Iniciar Sesión</button>
+                
+                <div class="error-message" id="errorMessage">
+                    Email o contraseña incorrectos
+                </div>
+                
+                <div class="info-message">
+                    <p><strong>Este acceso es para los moderadores</strong></p>  <!-- CAMBIADO -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Mujeres Empoderadas</p>
+        </div>
+    </footer>
+
+    <script src="../JS/login.js"></script>
+</body>
+</html>
