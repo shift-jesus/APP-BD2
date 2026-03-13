@@ -1,0 +1,17 @@
+# ===== CREDENCIALES - NUNCA SUBIR =====
+.env
+
+# ===== MAVEN =====
+target/
+*.class
+*.jar
+
+# ===== IDEs =====
+.idea/
+*.iml
+.vscode/
+*.suo
+
+# ===== SISTEMA =====
+.DS_Store
+Thumbs.db

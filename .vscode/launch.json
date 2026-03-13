@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AppBd2UniNApplication<APP-BD2-UniN>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "BACKEND.SRC.MAIN.JAVA.AppBd2UniNApplication",
+            "projectName": "APP-BD2-UniN",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
