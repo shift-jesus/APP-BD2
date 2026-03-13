@@ -23,10 +23,9 @@ public class AdminController {
         return usuarioRepository.findAll();
     }
 
-    // POST /api/admin/usuarios  → Solo ADMIN puede crear MODs
+    // POST /api/admin/usuarios → Solo ADMIN puede crear MODs
     @PostMapping("/usuarios")
     public ResponseEntity<?> crearModerador(@RequestBody Map<String, String> datos) {
-
         String emailAdmin = datos.get("emailAdmin");
         var admin = usuarioRepository.findByEmail(emailAdmin);
 
@@ -50,7 +49,7 @@ public class AdminController {
         return ResponseEntity.ok(usuarioRepository.save(nuevo));
     }
 
-    // DELETE /api/admin/usuarios/{id}  → Solo ADMIN puede eliminar MODs
+    // DELETE /api/admin/usuarios/{id} → Solo ADMIN puede eliminar MODs
     @DeleteMapping("/usuarios/{id}")
     public ResponseEntity<?> eliminarModerador(
             @PathVariable Long id,
